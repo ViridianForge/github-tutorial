@@ -1,4 +1,4 @@
-# Hands-on Introduction to the GitHub Work Flow
+# A Tale of GitHub
 
 ## Background
 
@@ -139,7 +139,7 @@ code which now passes all tests:
 
 ```
 > cat ./holyGrail/adding.py
-_import numpy as np_
+import numpy as np
 
 def sum(s):
     if len(s) == 0: return None
@@ -148,8 +148,8 @@ def sum(s):
         ans += si
     return ans
 
-_def mean(s):
-    return sum(np.asarray(s, dtype=np.float64))/len(s)_
+def mean(s):
+    return sum(np.asarray(s, dtype=np.float64))/len(s)
 
 > git add ./holyGrail/adding.py
 > git commit -m "Fixed sum and mean."
@@ -328,7 +328,7 @@ The file `holyGrail/adding.py` has additional lines that are not python code.
 played onto the file, `=====` the end of that commit's changes and the
 beginning of how the file logs in lancelot's branch, and `>>>> Fix...` the end
 of that.  Lancelot just deletes everything between `<<<` and `>>>`, so that
-only his own code is left.  Tries to continue:
+only his own code is left.  Lancelot tries to continue:
 
 ```
 > git rebase --continue
